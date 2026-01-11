@@ -20,5 +20,5 @@ echo 'src-git gecoosac https://github.com/lwb1978/openwrt-gecoosac.git' >>feeds.
 echo 'src-git ddnsgo  https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
 echo 'src-git watchdog https://github.com/sirpdboy/luci-app-watchdog' >>feeds.conf.default
 echo 'src-git lucky https://github.com/gdy666/luci-app-lucky.git' >>feeds.conf.default
-echo 'src-git filetransfer https://github.com/DustReliant/luci-app-filetransfer.git' >>feeds.conf.default
+git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-app-filetransfer
 # echo 'src-git kwrtpackages https://github.com/kiddin9/kwrt-packages.git' >>feeds.conf.default
