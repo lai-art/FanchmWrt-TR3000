@@ -80,6 +80,24 @@ jobs:
         chmod +x $DIY_P2_SH
         cd fanchmwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+       
+    - name: 修改固件内置软件源
+        run: |
+          # 进入源码目录
+          cd fanchmwrt
+          # 创建自定义 files 目录（对应固件的 /etc 目录）
+          mkdir -p files/etc/opkg
+          # 写入自定义的软件源配置（以清华源为例，适配 23.05 版本）
+          cat > files/etc/opkg/distfeeds.conf << EOF
+          src/gz openwrt_core https://mirrors.tuna.tsinghua.edu.cn/openwrt/releases/24.10.4/packages/x86_64/core
+          src/gz openwrt_base https://mirrors.tuna.tsinghua.edu.cn/openwrt/releases/24.10.4/packages/x86_64/base
+          src/gz openwrt_luci https://mirrors.tuna.tsinghua.edu.cn/openwrt/releases/24.10.4/packages/x86_64/luci
+          src/gz openwrt_packages https://mirrors.tuna.tsinghua.edu.cn/openwrt/releases/24.10.4/packages/x86_64/packages
+          src/gz openwrt_routing https://mirrors.tuna.tsinghua.edu.cn/openwrt/releases/24.10.4/packages/x86_64/routing
+          src/gz openwrt_telephony https://mirrors.tuna.tsinghua.edu.cn/openwrt/releases/24.10.4/packages/x86_64/telephony
+          EOF
+          # 可选：修改 opkg 配置文件，关闭校验（部分源可能无校验文件）
+          echo "option check_signature false" >> files/etc/opkg.conf
 
     - name: 下载软件包(Download package)
       id: package
