@@ -1,4 +1,4 @@
-name: 编译 FanchmWrt 固件(FanchmWrt Builder)
+name: 编译 FanchmWrt
 
 on:
   repository_dispatch:
