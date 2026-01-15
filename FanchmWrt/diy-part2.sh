@@ -10,8 +10,11 @@
 # See /LICENSE for more information.
 #
 
-# Modify default IP
+# 修改默认LAN口IP地址 Modify default IP
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+# 关闭opkg源验证
+sed -i 's/option overlay_root /overlay/#option overlay_root /overlay/g' package/system/opkg/files/opkg.conf
+
 
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
