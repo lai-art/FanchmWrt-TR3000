@@ -1,9 +1,0 @@
-src-git packages https://mirrors.ustc.edu.cn/immortalwrt/releases/24.10.4/packages/x86_64/packages
-src-git luci https://mirrors.ustc.edu.cn/immortalwrt/releases/24.10.4/packages/x86_64/luci
-src-git routing https://mirrors.ustc.edu.cn/immortalwrt/releases/24.10.4/packages/x86_64/routing
-src-git telephony https://mirrors.ustc.edu.cn/immortalwrt/releases/24.10.4/packages/x86_64/telephony
-src-git fanchmwrt https://github.com/fanchmwrt/fanchmwrt-packages.git
-# src-git gecoosac https://github.com/lwb1978/openwrt-gecoosac.git
-# src-git ddnsgo  https://github.com/sirpdboy/luci-app-ddns-go
-# src-git watchdog https://github.com/sirpdboy/luci-app-watchdog
-# src-git lucky https://github.com/gdy666/luci-app-lucky.git
